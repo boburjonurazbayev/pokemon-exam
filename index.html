@@ -1,15 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>Pokemon</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header class="header">
+      <div class="container">
+        <h1 class="visually-hidden">Create your Pokemon</h1>
+
+        <a
+          class="header__link ms-auto me-auto d-block text-center mb-5"
+          href="./index.html"
+        >
+          <img
+            class="header__logo"
+            src="./images/pokemon.svg"
+            alt="Pokemon`s logo"
+            width="610"
+            height="225"
+          />
+        </a>
+      </div>
+    </header>
+
+    <!-- Main -->
+
+    <main class="main">
+      <section class="pokemon">
+        <div class="container">
+          <!-- Information -->
+
+          <form class="pokemon__form d-flex flex-wrap justify-content-evenly mb-5">
+            <input
+              class="pokemon__input pokemon__image"
+              type="url"
+              placeholder="Image`s URL"
+              value="https://i.pinimg.com/originals/3f/53/20/3f5320bda51f29d0e6ef7a61d030c234.png"
+            />
+
+            <input
+              class="pokemon__input pokemon__name"
+              type="text"
+              placeholder="Name: Pokemon"
+              required
+              value="New Pokemon"
+            />
+
+            <input
+              class="pokemon__input pokemon__specialization"
+              type="text"
+              placeholder="Specialization: Grass, ..."
+              required
+              value="Grass, Flying"
+            />
+
+            <input
+              class="pokemon__input pokemon__weight"
+              type="text"
+              placeholder="Weight: 10"
+              required
+              value="59 kg"
+            />
+
+            <input
+              class="pokemon__input pokemon__height"
+              type="text"
+              placeholder="height: 99 m"
+              required
+              value="65 m"
+            />
+
+            <button class="button" type="submit">Add</button>
+          </form>
+
+          <!-- Results -->
+
+          <ul
+            class="pokemon__list list-unstyled d-flex flex-wrap justify-content-between"
+          >
+            <li class="pokemon-card">
+              <img
+                class="pokemon-card__image"
+                src="https://i.pinimg.com/564x/25/58/0e/25580e1561b5d3459be85520fe979d16.jpg"
+                alt="Pokemon`s image"
+                width="150"
+                height="150"
+              />
+
+              <span class="pokemon-card__line"></span>
+
+              <h2 class="pokemon-card__heading">Pokemon</h2>
+
+              <p class="pokemon-card__text">Grass, Poison</p>
+
+              <span class="pokemon-inner">
+                <span class="pokemon-inner__weight">6.9 kg</span>
+
+                <span class="pokemon-inner__height">99 age</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
     <script src="./js/pokemon.js"></script>
+
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>
