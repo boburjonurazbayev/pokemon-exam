@@ -32,7 +32,6 @@ body {
 
 img {
   vertical-align: middle;
-  object-fit: cover;
 }
 
 .main,
@@ -45,4 +44,10 @@ main {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.header__logo {
+  max-width: 610px;
+  width: 100%;
+
 }
